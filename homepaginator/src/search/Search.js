@@ -1,10 +1,15 @@
 import React from 'react';
-import './style.css'
+import './style.css';
 
 export class Search extends React.Component {
     render() {
         return (
-            <input type='search' placeholder={this.props.placeholder}/>
+            <div className='search-container'>
+                <input type='search' 
+                       placeholder={this.props.placeholder}
+                       searchTerm={this.props.searchTerm}
+                       onChange={(e) => this.props.handleSearchChange(e)}/>
+            </div>
         )
     }
 }

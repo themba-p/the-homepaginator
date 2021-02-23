@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background: #242424;
+    cursor: pointer;
+    display: flex;
+    height: 100px;
+    width: 200px;
+}
+
+.container:hover {
+    background: #282828;
+    color: #fff;
+}
+
+.container-inner {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-self: left;
+    padding: 12px;
+}
+
+.title {
+    font-size: .875rem;
+    font-weight: 600;
+}
+
+p {
+    color: #808080;
+    font-size: .875rem;
+}
+
+/* Folders */
+
+.folders-container header {
+    font-size: .625rem;
+    font-weight: 700;
+    letter-spacing: .01em;
+    margin-bottom: 12px;
+    text-align: left;
+}
+
+.folders-container ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.folders-container ul li {
+    margin-bottom: 12px;
+    margin-right: 12px;
+}
