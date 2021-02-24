@@ -3,8 +3,16 @@ import React from 'react';
 //import logo from './logo.svg';
 import RandomID from './common';
 import './App.css';
-import { Search } from './search/Search.js';
-import { Folders } from './bookmark_folders/Folders.js'
+
+// Components
+import Search from './search/Search.js';
+import Folders from './bookmark_folders/Folders.js';
+import List  from './bookmarks/List.js';
+import Sort from './Filtering/sort.js';
+import Filter from './Filtering/filter.js'
+
+// Fake data
+import { BrowserHistory } from './data/BrowserHistory.js';
 
 class App extends React.Component {
   constructor(props) {
@@ -12,6 +20,8 @@ class App extends React.Component {
     this.state = {
       initialFolders: _fakeFolders,
       folders: _fakeFolders,
+      bookmarksInitial: BrowserHistory,
+      browserHistory: BrowserHistory,
       searchTerm: '',
     }
     this.handleSearchChange = this.handleSearchChange.bind(this);
@@ -20,21 +30,37 @@ class App extends React.Component {
   handleSearchChange(e) {
     this.setState({searchTerm: e.target.value})
     let folders = this.state.initialFolders.slice();
+    let bookmarks = this.state.bookmarksInitial.slice();
 
     if (e.target.value) {
-      let matches = folders.filter(c => c.title.toLowerCase().includes(e.target.value.toLowerCase()));
-      folders = matches;
+      let _folders = folders.filter(c => c.title.toLowerCase().includes(e.target.value.toLowerCase()));
+      folders = _folders;
+
+      let _bookmarks = bookmarks.filter(c => c.title.toLowerCase().includes(e.target.value.toLowerCase()) ||
+                                             c.url.toLowerCase().includes(e.target.value.toLowerCase()));
+      bookmarks = _bookmarks;
     }
 
-     this.setState({folders: folders});
+     this.setState({
+       folders: folders,
+       browserHistory: bookmarks,
+      });
+
+    
   }
 
   render() {
     return (
       <div className="App">
-        <Search searchTerm={this.state.searchTerm}
-                handleSearchChange={(e) => this.handleSearchChange(e)}/>
-        <Folders items={this.state.folders}/>
+        <div className='main-content'>
+          <Search searchTerm={this.state.searchTerm}
+                  handleSearchChange={(e) => this.handleSearchChange(e)}/>
+          <Folders items={this.state.folders}/>
+          <Sort/>
+          <Filter/>
+          <List items={this.state.browserHistory}/>
+
+        </div>
       </div>
     );
   }
