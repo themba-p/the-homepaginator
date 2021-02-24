@@ -1,3 +1,5 @@
+@import '../colors.css';
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,11 +7,11 @@
 }
 
 .container {
-    background: #242424;
+    background: var(--secondary-background, blue);
     cursor: pointer;
     display: flex;
-    height: 100px;
-    width: 200px;
+    height: 88px;
+    width: 150px;
 }
 
 .container:hover {
@@ -28,31 +30,31 @@
 
 .title {
     font-size: .875rem;
-    font-weight: 600;
+    font-weight: 500;
+    letter-spacing: .01%;
+    margin-bottom: 2px;
 }
 
 p {
-    color: #808080;
+    color: var(--tertiary-color);
     font-size: .875rem;
 }
 
 /* Folders */
 
-.folders-container header {
-    font-size: .625rem;
-    font-weight: 700;
-    letter-spacing: .01em;
-    margin-bottom: 12px;
-    text-align: left;
+.folders-container {
+    height: 120px;
+    margin-bottom: 24px;
 }
 
 .folders-container ul {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     list-style: none;
 }
 
 .folders-container ul li {
-    margin-bottom: 12px;
-    margin-right: 12px;
+    margin-bottom: 8px;
+    margin-right: 8px;
 }

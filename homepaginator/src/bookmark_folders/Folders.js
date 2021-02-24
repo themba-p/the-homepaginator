@@ -1,8 +1,8 @@
 import React from 'react';
 import './style.css';
-import { Folder } from './Folder.js';
+import Folder from './Folder.js';
 
-export class Folders extends React.Component {
+class Folders extends React.Component {
     renderFolder(folder) {
         return (
         <Folder id={folder.id}
@@ -17,11 +17,10 @@ export class Folders extends React.Component {
 
         return(
             <div className='folders-container'>
-                <header>
-                    <h1>Folders</h1>
-                </header>
                 <ul>{folders}</ul>
             </div>
         );
     }
 }
+
+export default Folders;

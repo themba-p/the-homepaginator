@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 
-export class Search extends React.Component {
+class Search extends React.Component {
     render() {
         return (
             <div className='search-container'>
@@ -17,3 +17,5 @@ export class Search extends React.Component {
 Search.defaultProps = {
     placeholder: 'Search',
 }
+
+export default Search;

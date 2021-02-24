@@ -1,11 +1,33 @@
+@import '../colors.css';
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1 */
+    color: var(--input-placeholder-color, gray);
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Iternet Explorer 10-11 */
+    color: var(--input-placeholder-color, gray);
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: var(--input-placeholder-color, gray);
+}
+
 .search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 8vh;
+    width: 100%;
 }
 
 input[type='search'] {
@@ -19,5 +41,6 @@ input[type='search'] {
     outline: none;
     padding: 0 16px;
     width: 100%;
-    max-width: 70vw;
+    max-width: 70%;
+    min-width: 346px;
 }
