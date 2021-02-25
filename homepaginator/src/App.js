@@ -1,15 +1,13 @@
 import React from 'react';
 
 //import logo from './logo.svg';
-import RandomID from './common';
+import { RandomID } from './common';
 import './App.css';
 
 // Components
 import Search from './search/Search.js';
-import Folders from './bookmark_folders/Folders.js';
 import List  from './bookmarks/List.js';
-import Sort from './Filtering/sort.js';
-import Filter from './Filtering/filter.js'
+import Filter from './Filtering/filter.js';
 
 // Fake data
 import { BrowserHistory } from './data/BrowserHistory.js';
@@ -55,9 +53,8 @@ class App extends React.Component {
         <div className='main-content'>
           <Search searchTerm={this.state.searchTerm}
                   handleSearchChange={(e) => this.handleSearchChange(e)}/>
-          <Folders items={this.state.folders}/>
-          <Sort/>
-          <Filter/>
+          
+          <Filter folders={this.state.folders}/>
           <List items={this.state.browserHistory}/>
 
         </div>
