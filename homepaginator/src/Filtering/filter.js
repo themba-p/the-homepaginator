@@ -1,26 +1,27 @@
 import React from 'react';
 import './style.css';
+import Sort from './sort.js';
+
+// import DefaultState from './DefaultState';
+// import FolderState from './FolderState';
+import HistoryState from './HistoryState'
+
 import ClearIcon from '../icons/Clear.js';
 
 class Filter extends React.Component {
     render() {
         return (
             <div className='filter-container'>
-                <div className='clear-filters-container'>
-                    <button className='clear-filters-button'>
-                        <ClearIcon />
-                    </button>
-                </div>
-                <button className='filter-button active-filter'>
-                    Today
+            <div className='filter-container-inner'>
+                <button className='clear-filter-button'>
+                    <div className='clear-filter-inner'><ClearIcon/></div>
                 </button>
-                <button className='filter-button'>
-                    Yesterday
-                </button>
-                <button className='filter-button'>
-                    This week
-                </button>
+                {/* <DefaultState/> */}
+                {/* <FolderState folders={this.props.folders}/> */}
+                <HistoryState />
             </div>
+            <Sort/>
+        </div>
         );
     }
 }

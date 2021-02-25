@@ -71,50 +71,28 @@ button {
 /* Filters */
 
 .filter-container {
-    align-items: center;
-    display: flex;
-    height: 52px;
-    justify-content: left;
-    margin-top: 8px;
-    margin-bottom: 6px;
-    padding: 0 0px;
     width: 100%;
 }
 
-.clear-filters-container {
+.filter-container-inner {
     align-items: center;
     display: flex;
-    justify-content: center;
+    justify-content: left;
+    margin-bottom: 6px;
+}
+
+.clear-filter-button {
     height: 48px;
     margin-right: 8px;
     width: 48px;
 }
 
-.clear-filters-button {
+.clear-filter-inner {
     align-items: center;
-    border: 1px solid var(--primary-color);
-    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
     display: flex;
-    height: 28px;
-    justify-content: center;
-    width: 28px;
-    
-}
-
-.filter-button {
-    border: 1px solid var(--secondary-color);
-    border-radius: 32px;
-    font-size: .875rem;
-    color: var(--secondary-color);
     height: 32px;
-    margin-right: 8px;
-    padding: 0px 48px;
-    white-space: nowrap;
-}
-
-.active-filter {
-    background: #0CA96C;
-    border: 2px solid #0ACF83;
-    color: var(--primary-color);
-    font-weight: 700;
+    justify-content: center;
+    width: 32px;
 }
