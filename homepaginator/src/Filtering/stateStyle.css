@@ -1,0 +1,63 @@
+@import '../colors.css';
+
+.filter-button {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    font-size: .875rem;
+    font-weight: 500;
+    height: 48px;
+    margin-right: 8px;
+    outline: none;
+    width: auto;
+}
+
+.filter-button-inner {
+    align-items: center;
+    border: 1.5px solid transparent;
+    border-radius: 24px;
+    display: flex;
+    height: 32px;
+    padding: 0 16px 0 12px;
+}
+
+.alt-filter-button-style {
+    border: 1.5px solid var(--border-color);
+    padding: 0 16px;
+}
+
+.filter-button .icon {
+    align-items: center;
+    display: flex;
+    height: 24px;
+    margin-right: 4px;
+    padding: 5px;
+    width: 24px;
+}
+
+.filter-button .icon img {
+    height: 16px;
+    max-width: 24px;
+    object-fit: contain;
+}
+
+.filter-button-active {
+    background: #0737B3;
+    border: 1.5px solid #0045F6;
+}
+
+.menu-nav {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    width: auto;
+}
+
+/* Folders */
+
+.filter-state-container ul li {
+    /* margin-bottom: 8px; */
+    margin-right: 8px;
+}

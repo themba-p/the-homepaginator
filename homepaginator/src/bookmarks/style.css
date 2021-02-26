@@ -6,7 +6,6 @@
     grid-template-columns: [grid-column-1] auto 
                            [grid-column-2] auto
                            [grid-column-3] 1fr
-                           [grid-column-4] 2fr
                            [grid-column-5] auto;
     font-size: .875rem;
     font-weight: 500;
@@ -68,24 +67,25 @@ button {
 
 .b-title {
     color: var(--primary-color);
+    margin-right: 12px;
+    overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    max-width: 60%;
 }
 
 .url {
     align-items: center;
     color: var(--secondary-color);
     display: flex;
-    grid-column: grid-column-4;
     margin-right: 16px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    max-width: 100%;
 }
 
 .options-button {
-    grid-column: grid-column-5;
+    grid-column: grid-column-4;
 }
 
 /* LIST */

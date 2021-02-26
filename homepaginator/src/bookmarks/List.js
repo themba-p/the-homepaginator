@@ -13,8 +13,8 @@ class List extends React.Component {
     }
 
     render() {
-        let items = this.props.items.map(item => (
-           <li key='item.client_id'>{this.renderBookmark(item)}</li>
+        let items = this.props.items.map((item, i) => (
+           <li key={'bookmark' + i}>{this.renderBookmark(item)}</li>
         ))
 
         return (
