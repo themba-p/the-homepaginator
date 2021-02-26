@@ -26,3 +26,36 @@ export function RandomID(){
         }
     return _url;
   }
+
+  export const filterStates = {
+    Default: 'Home',
+    MostViewed: "Most viewed",
+    History: 'History',
+    Pins: 'Pins',
+    Folders: 'Folders',
+  }
+
+  export const dateEnum = {
+    Today: 'Today',
+    Yesterday: 'Yesterday',
+    Week: 'Week',
+    Month: 'Month',
+  }
+
+  //TO-DO get date ranges for week and month
+  export function getDateRange(date) {
+    let dateRange = [];
+    let dateObj = new Date();
+    switch (date) {
+      case date.Yesterday:
+        dateRange.push(dateObj.setDate(dateObj.getDate() - 1));
+        break;
+      case date.Week:
+        break;
+      default:
+      case date.Today:
+        dateRange.push(dateObj);
+        break;
+    }
+    return dateRange;
+  }

@@ -1,8 +1,31 @@
 @import '../colors.css';
 
-.sort-container {
+/* Filter Header */
+
+.filter-header {
+    align-items: center;
     display: flex;
     height: 48px;
+    justify-content: space-between;
+    padding: 0 32px 0 12px;
+    width: 100%;
+}
+
+.filter-header-title {
+    color: var(--primary-color);
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: .01%;
+}
+
+.filter-actions {
+    height: 100%;
+    width: 100px;
+}
+
+.sort-container {
+    display: flex;
+    height: 44px;
     justify-content: space-between;
     position: relative;
     width: 100%;
@@ -29,13 +52,6 @@ button {
 }
 
 /* Sort actions */
-
-.sort-actions {
-    align-items: center;
-    display: flex;
-    height: 100%;
-    margin-right: 36px;
-}
 
 .add-button {
     align-items: center;
